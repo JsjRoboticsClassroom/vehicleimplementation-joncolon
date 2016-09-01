@@ -12,17 +12,27 @@ public class Bicycle implements Vehicle, WheeliaAble {
 
 
     @Override
-    public void applyBrakes() {
+    public void applyBrake() {
+
+        while (speed != 0) {
+            speed -= 1;
+            System.out.println(speed);
+        }
 
     }
 
+
     @Override
-    public void speedUp(int delta) {
+    public void speedUp (int delta) {
+
+        this.speed += delta;
 
     }
 
     @Override
     public void slowDown(int delta) {
+
+        this.speed -= delta;
 
     }
 
@@ -35,3 +45,5 @@ public class Bicycle implements Vehicle, WheeliaAble {
         return true;
     }
 }
+
+
